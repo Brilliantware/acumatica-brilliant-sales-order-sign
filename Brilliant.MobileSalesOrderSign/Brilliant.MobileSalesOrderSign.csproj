@@ -4,7 +4,7 @@
 		<TargetFramework>net4.8</TargetFramework>
 		<OutputPath>bin\</OutputPath>
 		<LangVersion>preview</LangVersion>
-		<AssemblyName>Brilliant.SalesOrderSign</AssemblyName>
+		<AssemblyName>Brilliant.MobileSalesOrderSign</AssemblyName>
 	</PropertyGroup>
 	<ItemGroup>
 		<Compile Remove="_package\**" />

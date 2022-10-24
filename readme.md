@@ -1,1 +1,1 @@
-# Brilliant.SalesOrderSign
+# Brilliant.MobileSalesOrderSign
