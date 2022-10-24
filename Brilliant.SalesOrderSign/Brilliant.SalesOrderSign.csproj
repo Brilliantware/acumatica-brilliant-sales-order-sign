@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net4.8</TargetFramework>
+		<OutputPath>bin\</OutputPath>
+		<LangVersion>preview</LangVersion>
+		<AssemblyName>Brilliant.SalesOrderSign</AssemblyName>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Remove="_package\**" />
+		<EmbeddedResource Remove="_package\**" />
+		<None Remove="_package\**" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="PX.Common">
+	    <HintPath>..\..\builds\221120018\Acumatica ERP\Files\Bin\PX.Common.dll</HintPath>
+	  </Reference>
+	   <Reference Include="PX.Common">
+	    <HintPath>..\..\builds\221120018\Acumatica ERP\Files\Bin\PX.Common.dll</HintPath>
+	  </Reference>
+	  <Reference Include="PX.Common.Std">
+	    <HintPath>..\..\builds\221120018\Acumatica ERP\Files\Bin\PX.Common.Std.dll</HintPath>
+	  </Reference>
+	  <Reference Include="PX.Data">
+	    <HintPath>..\..\builds\221120018\Acumatica ERP\Files\Bin\PX.Data.dll</HintPath>
+	  </Reference>
+	  <Reference Include="PX.Data.BQL.Dynamic">
+	    <HintPath>..\..\builds\221120018\Acumatica ERP\Files\Bin\PX.Data.BQL.Dynamic.dll</HintPath>
+	  </Reference>
+	  <Reference Include="PX.Data.BQL.Fluent">
+	    <HintPath>..\..\builds\221120018\Acumatica ERP\Files\Bin\PX.Data.BQL.Fluent.dll</HintPath>
+	  </Reference>
+	  <Reference Include="PX.DbServices">
+	    <HintPath>..\..\builds\221120018\Acumatica ERP\Files\Bin\PX.DbServices.dll</HintPath>
+	  </Reference>
+	  <Reference Include="PX.Objects">
+	    <HintPath>..\..\builds\221120018\Acumatica ERP\Files\Bin\PX.Objects.dll</HintPath>
+	  </Reference>
+	  <Reference Include="PX.Web.UI">
+	    <HintPath>..\..\builds\221120018\Acumatica ERP\Files\Bin\PX.Web.UI.dll</HintPath>
+	  </Reference>
+	  <Reference Include="System.Configuration" />
+	</ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="SET SolutionDir=$(SolutionDir)&#xD;&#xA;SET ProjectName=$(ProjectName)&#xD;&#xA;SET ProjectDir=$(ProjectDir)&#xD;&#xA;%25SolutionDir%25Brilliant.Postbuild.exe copy  publish  --config %25SolutionDir%25Brilliant.Postbuild.local.config" />
+	</Target>
+</Project>

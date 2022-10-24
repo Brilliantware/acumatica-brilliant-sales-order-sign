@@ -1,0 +1,1 @@
+﻿<MobileSiteMap ScreenID="SO301000" Script="update screen SO301000 {&#xD;&#xA;  update container &quot;OrderSummary&quot;&#xD;&#xA;  {&#xD;&#xA;    add recordAction &quot;SignReport&quot;&#xD;&#xA;    {&#xD;&#xA;      behavior = SignReport&#xD;&#xA;      displayName = &quot;Sign&quot;&#xD;&#xA;    }&#xD;&#xA;  }&#xD;&#xA;    &#xD;&#xA;}" Type="update" />
